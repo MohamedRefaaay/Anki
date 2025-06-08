@@ -1,0 +1,170 @@
+/* Custom styles for Anki Card Generator */
+
+/* Arabic font settings */
+body {
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.6;
+}
+
+/* RTL specific adjustments */
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Card preview animations */
+.card-preview-enter {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.card-preview-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+/* Drag and drop zone */
+.drop-zone {
+    transition: all 0.3s ease;
+}
+
+.drop-zone.drag-over {
+    border-color: #3B82F6;
+    background-color: #EBF5FF;
+}
+
+/* Card item styles */
+.card-item {
+    transition: all 0.2s ease;
+}
+
+.card-item:hover {
+    background-color: #F9FAFB;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F3F4F6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D1D5DB;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9CA3AF;
+}
+
+/* Button animations */
+.btn {
+    transition: all 0.2s ease;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Loading states */
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card template styles */
+.card-template {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-template:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tag styles */
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background-color: #E5E7EB;
+    color: #374151;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tag:hover {
+    background-color: #D1D5DB;
+}
+
+/* Toast notifications */
+.toast {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #1F2937;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Arabic text specific styles */
+.arabic-text {
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.8;
+    letter-spacing: 0;
+}
+
+/* RTL specific spacing */
+.rtl-space {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .card-template {
+        padding: 1rem;
+    }
+    
+    .tag {
+        font-size: 0.75rem;
+        padding: 0.125rem 0.5rem;
+    }
+} 

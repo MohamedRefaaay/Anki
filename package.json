@@ -1,0 +1,27 @@
+{
+  "name": "anki-card-generator",
+  "version": "1.0.0",
+  "description": "تطبيق لإنشاء بطاقات Anki التعليمية",
+  "main": "app.js",
+  "scripts": {
+    "start": "http-server -p 3000",
+    "build": "mkdir -p dist && cp -r *.html *.js *.css dist/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "anki",
+    "flashcards",
+    "education",
+    "arabic",
+    "learning"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+} 
