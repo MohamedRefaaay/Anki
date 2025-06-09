@@ -1,13 +1,14 @@
+// vite.config.ts
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
+// Defines the Vite configuration for the project.
 export default defineConfig({
+  // Include React plugin for Vite.
   plugins: [react()],
-  base: '/2  export default defineConfig({
-    plugins: [react()],
-    base: '/Anki/', // <-- اسم الريبو الصحيح
-  });  export default defineConfig({
-    plugins: [react()],
-    base: '/Anki/', // <-- اسم الريبو الصحيح
-  });/', // <-- ضع هنا اسم الريبو الفرعي بالضبط
+  // Set the base public path for the application when deployed.
+  // For GitHub Pages, this should typically be the repository name,
+  // preceded and followed by a slash.
+  // Assuming the repository name is 'anki', the base path is '/anki/'.
+  base: '/anki/',
 });
